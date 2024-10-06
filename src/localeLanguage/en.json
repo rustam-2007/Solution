@@ -1,6 +1,19 @@
 {
-  "greeting": "Hello World",
   "company": "Company",
   "about": "About",
-  "certificates ": "Certificates"
+  "certificates": "Certificates",
+  "main-text": "Innovation, personnel, creativity are the foundations of our success!",
+  "section-text": "Contact",
+  "third-text": "We will try to meet all your requirements in the fintech and e-commerce industries We will try to meet all your requirements in the fintech and e-commerce industries",
+  "project": "Project",
+  "Partners": "Partners",
+  "Карьера в Solution Lab": "Career at Solution Lab",
+  "Cистема рассрочки": "Installment system",
+  "Маркетплейс товаров": "Marketplace of goods",
+  "Платежная система": "Payment system",
+  "Вакансии": "Vacancy",
+  "Разработка": "Development",
+  "Главная": "Home",
+  "design": "design",
+  "find-vacancy": "Find vacancy"
 }

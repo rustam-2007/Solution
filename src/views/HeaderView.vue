@@ -1,5 +1,5 @@
 <template>
-  
+
 </template>
 
 <script>
@@ -10,4 +10,4 @@ export default {
 
 <style scoped>
 
-</style>
+</style> 

@@ -11,24 +11,16 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue'),
       children: [
         {
-          path: '/about',
-          name: 'About',
-          // route level code-splitting
-          // this generates a separate chunk (About.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
-          component: () => import('../views/AboutView.vue')
-        },
-        {
           path: '/main',
-          name: 'Main',
+          name: 'main',
           // route level code-splitting
           // this generates a separate chunk (About.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
           component: () => import('../views/MainView.vue')
         },
         {
-          path: '/vacancy',
-          name: 'Vacancy',
+          path: '/vacancies',
+          name: 'vacancies',
           // route level code-splitting
           // this generates a separate chunk (About.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
@@ -36,7 +28,7 @@ const router = createRouter({
         },
         {
           path: '/single',
-          name: 'SingleVacancy',
+          name: 'singleVacancy',
           // route level code-splitting
           // this generates a separate chunk (About.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
@@ -49,13 +41,49 @@ const router = createRouter({
           // this generates a separate chunk (About.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
           component: () => import('../views/DesignerView.vue')
+        },
+        {
+          path: '/certificates',
+          name: 'certificates',
+          // route level code-splitting
+          // this generates a separate chunk (About.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import('../views/DesignerView.vue')
+        },
+        {
+          path: '/partner',
+          name: 'partner',
+          // route level code-splitting
+          // this generates a separate chunk (About.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import('../views/DesignerView.vue')
         }
 
 
       ]
     }
 
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      console.log(savedPosition)
+      return new Promise((resolve, reject) => {
+        const t = setTimeout(() => {
+          console.log("to.hash", to.hash);
+          resolve({
+            selector: to.hash,
+            // behavior: "smooth",
+          });
+          clearTimeout(t);
+        }, 300);
+      });
+    } else if (savedPosition) {
+      console.log("savedPosition", savedPosition);
+      return savedPosition;
+    }
+    return {  x: 0, y: 0 };
+  },
+
 })
 
 export default router

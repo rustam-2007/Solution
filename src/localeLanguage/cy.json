@@ -1,5 +1,5 @@
 {
-  "desctop": "Desctop",
+  "desktop": "Desktop",
   "search": "Search",
   "stock": "Stock",
   "monthly_sales": "Monthly sales",
@@ -7,5 +7,24 @@
   "events": "Events",
   "facts": "Invoices",
   "rating": "Rating",
-  "date_create": "Date"
+  "date_create": "Date",
+  "certificates": "sertifikatlar",
+  "main-text": "Innovatsiyalar, kadrlar, ijodkorlik – muvaffaqiyatimiz poydevori!",
+  "section-text": "Kontaklar",
+  "third-text": "Fintech va elektron tijorat sohalaridagi barcha talablaringizni qondirishga harakat qilamiz Fintech va elektron tijorat sohalaridagi barcha talablaringizni qondirishga harakat qilamiz",
+  "the-fourth": "Biz haqimizda",
+  "project": "Loyihalar",
+  "Partners": "Hamkorlar",
+  "more": "Batafsil",
+  "Career at Solution Lab": "Solutions Lab bilan karyera",
+  "Lorem-ipsum-dolor-sit-amet, consectetur adipiscing elit. Fusce suspendisse tincidunt non  diam amet porttitor in nam diam. Aenean eu, quam potenti amet, duis. Vel massa amet tellus tincidunt condimentum maecenas leo semper.  Tempus odio a mattis nec, suspendisse. Ultrices mauris, feugiat enim eget sapien, eu varius nullam.": "Bizning jamoamiz o‘z ishiga fidoyi, o‘zining turli hil iste’dodiga ega odamlardan tashkil topgan va bizni jamoamizda ko’proq shunday insonlsrni ko‘rishni istaymiz. Biz kompaniya bilan birgalikda rivojlanishga tayyor bo'lgan, professional ambitsiyaga va bitmas-tuganmas energiyaga ega xodimlarni taklif qilamiz. Agar sizning maqsadingiz shunchaki ish topish emas, balki yorqin karyera qurish bo'lsa, unda siz Solutions Lab-ga xush kelibsiz! Biz bilan yangi imkoniyatlar dunyosini kashf eting.",
+  "Cистема рассрочки": "To'lov tizimi",
+  "Маркетплейс товаров": "Mahsulotlar marketpleysi",
+  "Платежная система": "To'lov tizimi",
+  "main-text": "Jozibador-sodiqlik-tizimi va unutilmas-mijozlar-tajribasi-bilan-to'lov-vositalari-bozoridagi-yangi-so'z.",
+  "search_vacancy": "Vakansiya qidirish",
+  "Разработка": "Dasturlash",
+  "Вакансии": "Vakansiya",
+  "Главная": "Bosh sahifa",
+  "design": "Dizayn"
 }

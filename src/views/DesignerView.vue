@@ -13,7 +13,7 @@
     <div class="flex justify-around mt-4">
       <div class="flex items-center justify-center rounded-full px-4 py-2 bg-white w-72">
         <div class="bg-blue-400 rounded-full flex justify-center p-2 items-center w-12 h-12">
-          <img alt="" src="../assets/Icons/Calendar.svg">
+          <img alt="" src="@/assets/Icons/Calendar.svg">
         </div>
         <div class="ml-4">
           <p class="font-bold">Требуемый опыт работы:</p>
@@ -22,7 +22,7 @@
       </div>
       <div class="flex items-center justify-center rounded-full px-4 py-2 bg-white w-72">
         <div class="bg-blue-400 rounded-full flex justify-center p-2 items-center w-12 h-12">
-          <img alt="" src="../assets/Icons/Calendar.svg">
+          <img alt="" src="@/assets/Icons/Calendar.svg">
         </div>
         <div class="ml-4">
           <p class="font-bold">Требуемый опыт работы:</p>
@@ -31,7 +31,7 @@
       </div>
       <div class="flex items-center justify-center rounded-full px-4 py-2 bg-white w-72">
         <div class="bg-blue-400 rounded-full flex justify-center p-2 items-center w-12 h-12">
-          <img alt="" src="../assets/Icons/Calendar.svg">
+          <img alt="" src="@/assets/Icons/Calendar.svg">
         </div>
         <div class="ml-4">
           <p class="font-bold">Требуемый опыт работы:</p>
@@ -66,7 +66,7 @@
 
       <div class="ml-11 mt-8">
         <h1 class="font-bold">Условия работы:</h1>
-        <p class="text-base">- Удаленная работа;<br>
+        <p class="text-base" id="#certificates">- Удаленная работа;<br>
           - Бонусы за результат;<br>
           - Возможности профессионального роста;<br>
           - Оплата 1000 - 3500 евро в зависимости от вашего текущего уровня (будет расти по мере получения опыта).<br>
@@ -74,9 +74,6 @@
           Если ты считаешь, что подходишь нам, отправь копию своего резюме и портфолио (ОБЯЗАТЕЛЬНО!).
           Кандидатам, которые пройдут в узкий круг отбора, будет предложено ТЗ.</p>
       </div>
-
-
-
 
 
     </div>
