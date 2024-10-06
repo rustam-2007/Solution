@@ -8,8 +8,8 @@
       <div class="text-white">
 
         <ul class="flex flex-row ">
-          <li class="mr-3" v-for="item in items">
-            <router-link :to="item.path">{{item.name}}</router-link>
+          <li class="mr-3" v-for="item in items" :key="item.path">
+            <router-link :to="{name:item.path, hash:`#${item.id}`}">{{item.name}}</router-link>
           </li>
 
           <li>
@@ -24,11 +24,13 @@
                 <option value="uz">uz</option>
               </select>
             </label>
-            {{ $t('company') }}
+            <!--            {{ $t('company') }}-->
 
-            <span>{{ greeting }}: {{selectLanguage}}</span>
+
+            <!--            <span>{{ greeting }}: {{selectLanguage}}</span>-->
           </li>
         </ul>
+
 
       </div>
 
@@ -178,7 +180,7 @@
 
 <script setup>
 
-import { ref, watch } from 'vue'
+import { ref, watch, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n({ useScope: 'global' })
@@ -192,26 +194,33 @@ const items = ref(
   [
     {
       name: t('about'),
-      path: 'home'
+      path: 'main',
+      id: 'about'
 
+    },
+    {
+      name: t('main'),
+      path: 'main',
+      id: 'main'
     },
     {
       name: t('certificates'),
       path: 'certificates',
+      id: 'certificates',
+
 
     },
     {
-      name: t('Partner'),
-      path: 'Partner'
+      name: t('partner'),
+      path: 'partner',
+      id: 'partner',
 
     },
     {
-      name: t('Vacancy'),
-      path: 'Vacancy'
-
-    },
-
-
+      name: t('vacancy'),
+      path: 'vacancies',
+      id: 'vacancies',
+    }
   ]
 )
 
@@ -220,6 +229,10 @@ watch(() => selectLanguage.value, first => {
   locale.value = first
   greeting.value = t('greeting')
   t('company')
+  items.value[0].name = t('about')
+  items.value[1].name = t('certificates')
+  items.value[2].name = t('partner')
+  items.value[3].name = t('vacancy')
 
 
 }, {

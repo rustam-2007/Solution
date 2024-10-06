@@ -1,13 +1,24 @@
 {
-  "greeting": "Salom Dunyo",
   "company": "Kompaniya",
   "about": "Biz haqimizda",
   "certificates": "Sertifikatlar",
   "partner": "Hamkorlarimiz",
-  "Vacansy": "Vakansiya",
-  "About us": "Biz haqimizda",
-  "Innovations, team, creativity - the drivers of our success!": "Innovatsiyalar, kadrlar, ijodkorlik – muvaffaqiyatimiz poydevori!Innovatsiyalar, kadrlar, ijodkorlik – muvaffaqiyatimiz poydevori!",
-  "We will try to meet all your requirements in the fintech and e-commerce industries": "Fintech va elektron tijorat sohalarida sizning barcha talablaringizni qondirishga harakat qilamiz",
-  "Contact": "Aloqa"
-
+  "vacancy": "Vakansiya",
+  "contact": "Aloqa",
+  "main-text": "Innovatsiyalar, kadrlar, ijodkorlik – muvaffaqiyatimiz poydevori!",
+  "section-text": "Bog'lanish",
+  "third-text": "Fintech va elektron tijorat sohalarida sizning barcha talablaringizni qondirishga harakat qilamiz",
+  "project": "Loyihalar",
+  "Partners": "Hamkorlar",
+  "more": "Batafsil",
+  "Career-at-Solution-Lab": "Solutions Lab bilan karyera",
+  "Cистема рассрочки": "To'lov tizimi",
+  "Маркетплейс товаров": "Mahsulotlar marketpleysi",
+  "Платежная система": "To'lov tizimi",
+  "more": "Batafsil",
+  "Вакансии": "Ish o'rinlari",
+  "search_vacancy": "Vakansiya qidirish",
+  "Главная": "Bosh sahifa",
+  "Разработка": "Dasturlash",
+  "design": "Dizayn"
 }
