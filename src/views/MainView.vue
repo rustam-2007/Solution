@@ -8,7 +8,7 @@
             {{ t('main-text') }}
           </p>
 
-          <img alt="" class="left-10 absolute" src="/src/assets/Icons/Line.svg" />
+          <img alt="" class="left-10 absolute" src="../assets/Icons/Line.svg" />
           <img alt="" class="left-10 absolute" src="../assets/Icons/Line.svg" />
           <img alt="" class="left-80 top-20 absolute" src="../assets/Icons/Line.svg" />
           <img alt="" class="right-40 absolute" src="../assets/Icons/Line.svg" />
