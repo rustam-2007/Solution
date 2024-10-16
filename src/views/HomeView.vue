@@ -2,9 +2,14 @@
   <main class="relative" style="background: #F8F9F9">
     <!--  NAVBAR-START-->
     <nav class="container bg-blue-400 px-28 py-6 flex justify-between">
-      <div class=" text-white ">
-        SOLUTIONS LAB:
-      </div>
+      <router-link to="/main">
+        <div class=" text-white ">
+          SOLUTIONS LAB:
+
+        </div>
+      </router-link>
+
+
       <div class="text-white">
 
         <ul class="flex flex-row ">
