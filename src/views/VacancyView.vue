@@ -1,7 +1,7 @@
 <template>
   <main style="background: #f8f9f9">
-    <div class="bg-blue-400 relative blue__height flex items-center justify-between px-28">
-      <h1 class="text-white text-4xl">{{ $t('Вакансии') }}</h1>
+    <div class="bg-blue-400 relative blue__height flex items-center justify-between px-4 md:px-20 lg:px-28">
+      <h1 class="text-white sm:text-4xl">{{ $t('Вакансии') }}</h1>
       <div class="flex">
         <p class="text-white mr-4">{{ $t('Главная') }}</p>
         <img alt="" class="mr-4" src="../assets/Icons/right-arrow.svg" />
@@ -14,7 +14,7 @@
     </div>
 
     <section>
-      <div class="flex justify-center mt-12 mr-5 text-4xl font-bold leading-7">
+      <div class="flex justify-center mt-12 mr-5  px-4  md:px-23 lg:px-24 sm:text-4xl font-bold leading-7">
         {{ $t('Разработка') }}
       </div>
 
@@ -29,7 +29,7 @@
       <!--      collapse end-->
     </section>
     <section>
-      <div class="flex justify-center mt-12 mr-5 text-4xl font-bold leading-7">
+      <div class="flex justify-center mt-12 mr-5 sm:text-4xl font-bold leading-7">
         {{ $t('design') }}
       </div>
 

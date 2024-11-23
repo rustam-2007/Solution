@@ -1,8 +1,9 @@
 <template>
-  <main class="relative" style="background: #F8F9F9">
+  <main style="background-color: #F8F9F9">
     <!--  NAVBAR-START-->
-    <nav class="container bg-blue-400 px-28 py-6 flex justify-between">
-      <router-link to="/main">
+    <nav class="blue-400 px-28 py-6 hidden md:flex justify-between" style="background: #6DB8FF">
+
+      <router-link :to="{name:'main', hash:'#main'}">
         <div class=" text-white ">
           SOLUTIONS LAB:
 
@@ -13,7 +14,7 @@
       <div class="text-white">
 
         <ul class="flex flex-row ">
-          <li class="mr-3" v-for="item in items" :key="item.path">
+          <li :key="item.path" class="mr-3" v-for="item in items">
             <router-link :to="{name:item.path, hash:`#${item.id}`}">{{item.name}}</router-link>
           </li>
 
@@ -40,20 +41,81 @@
       </div>
 
     </nav>
+    <header class="relative">
+      <nav class="block md:hidden px-4 py-2 blue-400" style="background:#6DB8FF">
+
+        <div class="flex justify-between items-center sm:px-2">
+          <router-link :to="{name:'main', hash:'#main'}">
+            <div class="text-white text-sm">
+              SOLUTIONS LAB:
+
+            </div>
+          </router-link>
+          <div @click="burgerClick">
+            <img alt="Burger image" src="../assets/Icons/burger.svg">
+          </div>
+        </div>
+      </nav>
+      <div :class="{'hidden':!showHide}" class="absolute w-full" style="height: 270px; color: white; background:
+      #6DB8FF; top: 45px;
+    z-index: 99999;">
+
+        <ul class="flex flex-col text-right">
+          <li :key="item.path" class="mr-3" v-for="item in items">
+            <router-link :to="{name:item.path, hash:`#${item.id}`}">{{item.name}}</router-link>
+          </li>
+
+          <li>
+
+            <label class="text-black mr-3">
+
+              <select v-model="selectLanguage">
+                <option value="ru">
+                  ru
+                </option>
+                <option value="en">en</option>
+                <option value="uz">uz</option>
+              </select>
+            </label>
+            <!--            {{ $t('company') }}-->
+
+
+            <!--            <span>{{ greeting }}: {{selectLanguage}}</span>-->
+          </li>
+        </ul>
+
+
+      </div>
+    </header>
     <!--  NAVBAR-END-->
     <router-view />
     <!--  FOOTER-START-->
-    <footer class="">
 
-      <div class="flex justify-between items-center mx-24">
 
-        <div class="flex flex-col mt-3">
-          <div class="flex justify-start mt-16">
+    <footer style="background-color: #F8F9F9">
+      <div class="flex flex-col justify-between py-16 items-start ml-8 md:mx-24 lg:mx-24  md:flex-row lg:flex-row">
+        <div class="mt-6 md:mt-0 lg:mt-0 flex flex-col">
+          <div class="flex justify-start font-bold items-center">
             <h1>SOLUTIONS LAB</h1>
+            <img alt="" src=".../assets/Icons/double-round.svg">
+            <!--            icons-start-->
+            <div class="flex md:hidden lg:hidden ml-4">
+              <div class="rounded-full mr-2 flex justify-center items-center bg-white h-8 w-8">
+                <img alt="" src="../assets/Icons/f.svg">
+              </div>
+              <div class="rounded-full mr-2 flex justify-center items-center bg-white h-8 w-8">
+                <img alt="" src="../assets/Icons/f.svg">
+              </div>
+              <div class="rounded-full flex justify-center items-center bg-white h-8 w-8">
+                <img alt="" src="../assets/Icons/f.svg">
+              </div>
 
+            </div>
+            <!--            icons-end-->
           </div>
           <p class="flex">Open an account in minutes, <br> get full Control for much <br> longer.</p>
-          <div class="flex justify-start">
+          <div class="flex hidden md:flex lg:flex">
+            <!--            facebook-icon-start-->
             <svg fill="none" height="110" viewBox="0 0 110 110" width="110" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d_10338_1509)">
                 <path
@@ -81,7 +143,10 @@
                 </filter>
               </defs>
             </svg>
+            <!--            facebook-icon-end-->
 
+
+            <!--            instagram-icon-start-->
             <svg fill="none" height="110" viewBox="0 0 111 110" width="111" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d_10338_1512)">
                 <path
@@ -119,7 +184,9 @@
               </defs>
             </svg>
 
+            <!--            instagram-icon-end-->
 
+            <!--twitter-icon-start-->
             <svg fill="none" height="110" viewBox="0 0 111 110" width="111" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d_10338_1521)">
                 <path
@@ -147,39 +214,114 @@
                 </filter>
               </defs>
             </svg>
-
-
+            <!--            twitter-icon-end-->
           </div>
-
+          <div class="flex justify-start md:flex-row lg:flex-row">
+          </div>
         </div>
 
-        <div class="list-none">
+        <div class="mt-6 hidden md:block lg:block md:mt-0 lg:mt-0 list-none text-black">
           <h1 class="font-bold">{{ $t('company') }}</h1>
           <li class="text-lg">About</li>
           <li class="text-lg">Careers</li>
           <li class="text-lg">Mobile</li>
         </div>
 
-        <div class="list-none">
+        <div class="mt-6 hidden md:block lg:block md:mt-0 lg:mt-0 list-none">
           <h1 class="font-bold">Contact</h1>
           <li class="text-lg">About</li>
           <li class="text-lg">Careers</li>
           <li class="text-lg">Mobile</li>
         </div>
 
-        <div class="list-none">
+        <div class="mt-6 hidden md:block lg:block md:mt-0 lg:mt-0 list-none">
           <h1 class="font-bold">More</h1>
           <li class="text-lg">About</li>
           <li class="text-lg">Careers</li>
           <li class="text-lg">Mobile</li>
+
         </div>
+
+        <!--        mobile footer items start-->
+        <div class="flex md:hidden lg:hidden flex-row md:flex-col sm:flex-col ">
+          <div class="footer_menu">
+            <nav class="drop-down-menu">
+              <input class="activate" id="accordion-1" name="accordion-1" type="checkbox">
+              <label class=" menu-title" for="accordion-1">
+                <div class="flex items-center">
+                  <span>{{ $t('company') }}</span>
+                  <svg class="h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M7 10l5 5l5-5H7z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </label>
+              <i class="ion-arrow-down-b"></i>
+              <div class="drop-down">
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Mobile</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="flex md:hidden lg:hidden flex-row md:flex-col sm:flex-col mt-4">
+          <div class="footer_menu">
+
+            <nav class="drop-down-menu">
+              <input class="activate" id="accordion-2" name="accordion-2" type="checkbox">
+              <label class=" menu-title" for="accordion-2">
+                <div class="flex items-center">
+                  <span>{{ $t('contact') }}</span>
+                  <svg class="h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M7 10l5 5l5-5H7z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </label>
+              <i class="ion-arrow-down-b"></i>
+              <div class="drop-down">
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Mobile</a>
+              </div>
+            </nav>
+
+          </div>
+        </div>
+
+        <div class="flex md:hidden lg:hidden flex-row md:flex-col sm:flex-col mt-4 ">
+          <div class="footer_menu">
+            <span class="drop-down-menu">
+              <input class="activate" id="accordion-3" name="accordion-3" type="checkbox">
+              <label class=" menu-title" for="accordion-3">
+                <div class="flex items-center">
+                  <span>{{ $t('more') }}</span>
+                  <svg class="h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M7 10l5 5l5-5H7z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </label>
+              <i class="ion-arrow-down-b"></i>
+              <div class="drop-down">
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Mobile</a>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <!--        mobile footer items end-->
+
+
       </div>
-
-
     </footer>
     <!--  FOTTER-END-->
-  </main>
 
+  </main>
 
 </template>
 
@@ -194,6 +336,12 @@ const { t, locale } = useI18n({ useScope: 'global' })
 const selectLanguage = ref('ru')
 
 const greeting = ref(t('greeting'))
+
+const showHide = ref(false)
+
+const burgerClick = () => {
+  showHide.value = !showHide.value
+}
 
 const items = ref(
   [
@@ -211,20 +359,20 @@ const items = ref(
     {
       name: t('certificates'),
       path: 'certificates',
-      id: 'certificates',
+      id: 'certificates'
 
 
     },
     {
       name: t('partner'),
       path: 'partner',
-      id: 'partner',
+      id: 'partner'
 
     },
     {
       name: t('vacancy'),
       path: 'vacancies',
-      id: 'vacancies',
+      id: 'vacancies'
     }
   ]
 )
@@ -247,6 +395,73 @@ watch(() => selectLanguage.value, first => {
 </script>
 
 <style>
+  .footer_menu a {
+    display: block;
+    padding: 10px 15px;
+  }
+
+  .drop-down a {
+    min-width: 90px;
+  }
+
+  .drop-down-menu {
+    display: block;
+  }
 
 
+  .menu-title {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .activate {
+    display: none;
+
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    margin: 0 0 0 -15px;
+    opacity: 0;
+  }
+
+
+  .drop-down a:hover {
+    background: #eee;
+  }
+
+
+  .drop-down {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .drop-down a {
+    color: black;
+    text-decoration: none;
+    text-transform: Capitalize;
+
+  }
+
+  .activate:checked ~ .drop-down {
+    max-height: 200px;
+  }
+
+  .drop-down, .footer_menu a, .drop-down-menu {
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  i.ion-arrow-down-b {
+    position: absolute;
+    top: 8px;
+    color: #fff;
+    right: 14px;
+    font-size: 1.5em;
+  }
 </style>

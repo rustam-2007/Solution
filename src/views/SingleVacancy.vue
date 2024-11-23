@@ -3,34 +3,40 @@
     <h1 class="text-4xl">{{localeItem?.job}}</h1>
     <p class="text-base">{{localeItem?.salary}} sum</p>
   </main>
-  <section class="flex justify-around mt-4" style="background: #F8F9F9 !important;">
-    <div class="flex bg-white w-1/4 rounded-full p-2 items-start justify-center" style="background: #FFffff
+  <section class="flex justify-around mt-4 mx-11 flex-col md:flex-row lg:flex-row" style="background: #F8F9F9
+  !important;">
+    <!--    rounded cards start-->
+    <div class="flex bg-white w-full md:w-1/4 lg:w-1/4 rounded-full p-2 items-center justify-center"
+         style="background:
+    #FFffff
     !important;">
       <div class="bg-blue-400 rounded-full p-3">
         <img alt="Bag" src="../assets/Icons/bag.svg" style="height: 25px">
       </div>
-
-
       <div class="ml-4">
         <h1 class="text-md font-bold">Требуемый опыт работы:</h1>
         <p class="text-base">{{localeItem?.skills}} года</p>
       </div>
     </div>
-    <div class="flex bg-white w-1/4 rounded-full p-2 items-start" style="background: #FFffff !important;">
+    <div class="flex bg-white sm:w-full md:w-1/4 lg:w-1/4 rounded-full p-2 items-center" style="background: #FFffff
+    !important;">
 
 
       <div class="bg-blue-400 rounded-full p-3">
         <img alt="Bag" src="../assets/Icons/bag.svg">
       </div>
 
-      <div class="flex justify-center items-center ml-4">
-        <h1 class="text-md font-bold mr-2" >Тип занятости: </h1>
-        <p class="text-base">Полная занятость удаленная работа</p>
+      <div class="flex flex-col justify-centeritems-start">
+        <div class="ml-4">
+          <h1 class="text-md font-bold mr-2">Тип занятости: </h1>
+          <p class="text-base">Полная занятость удаленная работа</p>
+        </div>
       </div>
 
 
     </div>
-    <div class="flex bg-white w-1/4 rounded-full p-2 items-start" style="background: #FFffff !important;">
+    <div class="flex bg-white sm:w-full md:w-1/4 lg:w-1/4 rounded-full p-2 items-center" style="background: #FFffff
+    !important;">
 
 
       <div class="bg-blue-400 rounded-full p-3">
@@ -44,6 +50,8 @@
 
 
     </div>
+    <!--    rounded cards end-->
+
   </section>
 
   <section class="ml-12 mt-8">
